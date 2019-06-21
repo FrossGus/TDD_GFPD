@@ -15,12 +15,15 @@
 - :test: test_leer_varias_direcciones_memoria
   :line: 74
   :message: ''
+- :test: test_leer_varias_direcciones_memoria_sumar_valores
+  :line: 94
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 4
-  :passed: 4
+  :total: 5
+  :passed: 5
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.0015127069782465696
+:time: 0.000914294010726735

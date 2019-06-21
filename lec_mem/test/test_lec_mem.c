@@ -11,8 +11,8 @@ Los pasos a cumplir en cada testeo son:
 i   Leer posicion de memoria (PRIMER COMMIT).
 ii  Devolver TRUE si pudo leer, y FALSE si no (SEGUNDO COMMIT).
 iii Devolver valor de la posicion de memoria leida (TERCER COMMIT)
-iv  Leer varias direcciones de memoria.
-v   Sumar los valores de las direcciones de memoria leidas.
+iv  Leer varias direcciones de memoria (CUARTO COMMIT).
+v   Sumar los valores de las direcciones de memoria leidas. (QUINTO COMMIT)
 
 */
 #include "stdio.h"
@@ -91,16 +91,25 @@ void test_leer_varias_direcciones_memoria (void) {
 	}
 }
 
+void test_leer_varias_direcciones_memoria_sumar_valores (void) {
+	
+	// Asigno la direccion de memoria a leer.
+	uint16_t dir_mem = 0x0000;
+
+	// Creo la variable donde almacenar la devolucion.
+	uint16_t devolucion;
 
 
+	for (int i = 0; i < 100; i++){
 
+		// Envio la direccion de memoria a leer a la funcion especifica y almaceno en devolucion
+		devolucion = devolucion + leer_almacen_trafico_sumando(&dir_mem + i);	
 
+		// Compruebo que devolvio el valor de la direccion de memoria.
 
-
-
-
-
-
+	}
+	TEST_ASSERT_EQUAL(100, devolucion);
+}
 
 
 

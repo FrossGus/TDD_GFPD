@@ -160,3 +160,47 @@ void test_leer_varias_direcciones_memoria (void) {
  }
 
 }
+
+
+
+void test_leer_varias_direcciones_memoria_sumar_valores (void) {
+
+
+
+
+
+ uint16_t dir_mem = 0x0000;
+
+
+
+
+
+ uint16_t devolucion;
+
+
+
+
+
+ for (int i = 0; i < 100; i++){
+
+
+
+
+
+  devolucion = devolucion + leer_almacen_trafico_sumando(&dir_mem + i);
+
+
+
+
+
+
+
+ }
+
+ UnityAssertEqualNumber((UNITY_INT)((100)), (UNITY_INT)((devolucion)), (
+
+((void *)0)
+
+), (UNITY_UINT)(111), UNITY_DISPLAY_STYLE_INT);
+
+}
