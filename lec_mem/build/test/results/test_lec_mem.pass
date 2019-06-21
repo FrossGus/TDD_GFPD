@@ -4,14 +4,17 @@
   :file: test_lec_mem.c
 :successes:
 - :test: test_leer_primera_posicion_memoria
-  :line: 24
+  :line: 28
+  :message: ''
+- :test: test_devolver_true_false_lectura_posicion_memoria
+  :line: 41
   :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 1
-  :passed: 1
+  :total: 2
+  :passed: 2
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.0009820600098464638
+:time: 0.001971539022633806

@@ -5,21 +5,75 @@
 
 
 
+
+
+
+
+
+
 void test_leer_primera_posicion_memoria (void) {
+
+
+
+
 
  uint16_t dir_mem = 0x0000;
 
+
+
+
+
  leer_almacen_trafico(&dir_mem);
 
- UnityAssertEqualNumber((UNITY_INT)((0x0000)), (UNITY_INT)((dir_mem)), (
+
+
+
+
+ UnityAssertEqualNumber((UNITY_INT)((0x000)), (UNITY_INT)((dir_mem)), (
 
 ((void *)0)
 
-), (UNITY_UINT)(27), UNITY_DISPLAY_STYLE_INT);
+), (UNITY_UINT)(37), UNITY_DISPLAY_STYLE_INT);
+
+
+
+}
+
+
+
+void test_devolver_true_false_lectura_posicion_memoria (void) {
 
 
 
 
+
+ uint16_t dir_mem = 0x0000;
+
+
+
+
+
+ 
+
+_Bool 
+
+     devolucion;
+
+
+
+
+
+ devolucion = leer_almacen_trafico(&dir_mem);
+
+
+
+
+
+ UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((devolucion)), (
+
+((void *)0)
+
+), (UNITY_UINT)(53), UNITY_DISPLAY_STYLE_INT);
 
 
 

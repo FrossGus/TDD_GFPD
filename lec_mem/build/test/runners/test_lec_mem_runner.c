@@ -36,6 +36,7 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_leer_primera_posicion_memoria (void);
+extern void test_devolver_true_false_lectura_posicion_memoria (void);
 
 
 /*=======Suite Setup=====*/
@@ -70,7 +71,8 @@ int main(void)
 {
   suite_setup();
   UnityBegin("test_lec_mem.c");
-  RUN_TEST(test_leer_primera_posicion_memoria , 24);
+  RUN_TEST(test_leer_primera_posicion_memoria , 28);
+  RUN_TEST(test_devolver_true_false_lectura_posicion_memoria , 41);
 
   return suite_teardown(UnityEnd());
 }
