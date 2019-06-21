@@ -10,9 +10,9 @@ La funcion a testear debe Leer en forma completa la memoria compartida (almacen 
 Los pasos a cumplir en cada testeo son:
 i   Leer posicion de memoria (PRIMER COMMIT).
 ii  Devolver TRUE si pudo leer, y FALSE si no (SEGUNDO COMMIT).
-iii Devolver valor de la posicion de memoria leida.
-iii 
-v   Calcular cantidad de datos incongruente y devolver valor.
+iii Devolver valor de la posicion de memoria leida (TERCER COMMIT)
+iv  Leer varias direcciones de memoria.
+v   Sumar los valores de las direcciones de memoria leidas.
 
 */
 #include "stdio.h"
@@ -51,5 +51,22 @@ void test_devolver_true_false_lectura_posicion_memoria (void) {
 
 	// Compruebo que no pudo leer la direccion de memoria.
 	TEST_ASSERT_EQUAL(FALSE, devolucion);
+
+}
+
+
+void test_devolver_valor_posicion_memoria (void) {
+	
+	// Asigno la direccion de memoria a leer.
+	uint16_t dir_mem = 0x0000;
+
+	// Creo la variable donde almacenar la devolucion.
+	uint16_t devolucion;
+
+	// Envio la direccion de memoria a leer a la funcion especifica y almaceno en devolucion
+	devolucion = leer_almacen_trafico(&dir_mem);	
+
+	// Compruebo que devolvio el valor de la direccion de memoria.
+	TEST_ASSERT_EQUAL(0, devolucion);
 
 }

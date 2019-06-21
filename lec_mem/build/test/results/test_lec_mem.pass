@@ -9,12 +9,15 @@
 - :test: test_devolver_true_false_lectura_posicion_memoria
   :line: 41
   :message: ''
+- :test: test_devolver_valor_posicion_memoria
+  :line: 58
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 2
-  :passed: 2
+  :total: 3
+  :passed: 3
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.001971539022633806
+:time: 0.0015363440033979714
