@@ -116,3 +116,47 @@ void test_devolver_valor_posicion_memoria (void) {
 
 
 }
+
+
+
+void test_leer_varias_direcciones_memoria (void) {
+
+
+
+
+
+ uint16_t dir_mem = 0x0000;
+
+
+
+
+
+ uint16_t devolucion;
+
+
+
+
+
+ for (int i = 0; i < 100; i++){
+
+
+
+
+
+  devolucion = leer_almacen_trafico(&dir_mem + i);
+
+
+
+
+
+  UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((devolucion)), (
+
+ ((void *)0)
+
+ ), (UNITY_UINT)(89), UNITY_DISPLAY_STYLE_INT);
+
+
+
+ }
+
+}

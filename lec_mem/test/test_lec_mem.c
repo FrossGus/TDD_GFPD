@@ -70,3 +70,37 @@ void test_devolver_valor_posicion_memoria (void) {
 	TEST_ASSERT_EQUAL(0, devolucion);
 
 }
+
+void test_leer_varias_direcciones_memoria (void) {
+	
+	// Asigno la direccion de memoria a leer.
+	uint16_t dir_mem = 0x0000;
+
+	// Creo la variable donde almacenar la devolucion.
+	uint16_t devolucion;
+
+
+	for (int i = 0; i < 100; i++){
+
+		// Envio la direccion de memoria a leer a la funcion especifica y almaceno en devolucion
+		devolucion = leer_almacen_trafico(&dir_mem + i);	
+
+		// Compruebo que devolvio el valor de la direccion de memoria.
+		TEST_ASSERT_EQUAL(0, devolucion);
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

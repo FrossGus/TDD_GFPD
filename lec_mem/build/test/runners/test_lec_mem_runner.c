@@ -38,6 +38,7 @@ extern void tearDown(void);
 extern void test_leer_primera_posicion_memoria (void);
 extern void test_devolver_true_false_lectura_posicion_memoria (void);
 extern void test_devolver_valor_posicion_memoria (void);
+extern void test_leer_varias_direcciones_memoria (void);
 
 
 /*=======Suite Setup=====*/
@@ -75,6 +76,7 @@ int main(void)
   RUN_TEST(test_leer_primera_posicion_memoria , 28);
   RUN_TEST(test_devolver_true_false_lectura_posicion_memoria , 41);
   RUN_TEST(test_devolver_valor_posicion_memoria , 58);
+  RUN_TEST(test_leer_varias_direcciones_memoria , 74);
 
   return suite_teardown(UnityEnd());
 }

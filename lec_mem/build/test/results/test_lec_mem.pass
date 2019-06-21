@@ -12,12 +12,15 @@
 - :test: test_devolver_valor_posicion_memoria
   :line: 58
   :message: ''
+- :test: test_leer_varias_direcciones_memoria
+  :line: 74
+  :message: ''
 :failures: []
 :ignores: []
 :counts:
-  :total: 3
-  :passed: 3
+  :total: 4
+  :passed: 4
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.0015363440033979714
+:time: 0.0015127069782465696
